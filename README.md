@@ -4,8 +4,6 @@
 # Dataset:
 The original images were too large to push onto github. They can be downloaded from here:  
 https://www.kaggle.com/c/hubmap-kidney-segmentation/data
- 
-I have however, included the sliced, resized test images in grayscale.
 
 
 # File Structure 
