@@ -5,6 +5,9 @@
 The original images were too large to push onto github. They can be downloaded from here:  
 https://www.kaggle.com/c/hubmap-kidney-segmentation/data
  
+I have however, included the sliced, resized test images in grayscale.
+
+
 # File Structure 
 My folders are organized a little differently than the way the original zip file is organized.  
 You will need to move the training and test images to the locations listed below in order for the code to work.  
