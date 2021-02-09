@@ -1,7 +1,12 @@
-# Kidney Segmentation
- kidney segmentation | Kaggle Competition
+# Kidney Cell Segmentation
+The goal of this project is to identify glomeruli in images of kidney slices.
  
-# File Structure 
+## Dataset:
+The original images were too large to push onto github. They can be downloaded from here:  
+https://www.kaggle.com/c/hubmap-kidney-segmentation/data
+
+
+## File Structure 
 My folders are organized a little differently than the way the original zip file is organized.  
 You will need to move the training and test images to the locations listed below in order for the code to work.  
 My code will eventually add additional folders called masks, grey and slices.  
@@ -25,3 +30,5 @@ My code will eventually add additional folders called masks, grey and slices.
     │    
     └── JSONs     
         └── <b>ORIGINAL TRAIN JSON FILES GO HERE</b>  </pre>
+
+
