@@ -5,8 +5,6 @@ The goal of this project is to identify glomeruli in images of kidney slices.
 The original images were too large to push onto github. They can be downloaded from here:  
 https://www.kaggle.com/c/hubmap-kidney-segmentation/data
 
-I have pushed the sliced, resized training and testing images in grayscale.
-
 
 ## File Structure 
 My folders are organized a little differently than the way the original zip file is organized.  
@@ -32,3 +30,5 @@ My code will eventually add additional folders called masks, grey and slices.
     │    
     └── JSONs     
         └── <b>ORIGINAL TRAIN JSON FILES GO HERE</b>  </pre>
+
+
