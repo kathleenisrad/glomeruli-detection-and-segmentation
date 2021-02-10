@@ -1,4 +1,4 @@
-# Kidney Cell Segmentation
+# Kidney Cell Segmentation -- WIP!
 The goal of this project is to identify glomeruli in images of kidney slices.
  
 ## Dataset:
