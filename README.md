@@ -1,7 +1,10 @@
-# Kidney Cell Segmentation -- WIP!
-The goal of this project is to identify glomeruli in images of kidney slices.
+# Glomeruli Detection and Segmentation
+The goal of this project is to identify glomeruli in images of kidney slices.  
+I used both Faster R-CNN and Mask R-CNN and compare their performances below.  
  
 ## Dataset:
+8 training images and 5 testing images were provided.  
+
 The original images were too large to push onto github. They can be downloaded from here:  
 https://www.kaggle.com/c/hubmap-kidney-segmentation/data
 
@@ -32,3 +35,23 @@ My code will eventually add additional folders called masks, grey and slices.
         └── <b>ORIGINAL TRAIN JSON FILES GO HERE</b>  </pre>
 
 
+## EDA:
+I performed some exploratory data analysis on the original images to familiarize myself with the dataset.  
+The jupyter notebook for EDA is included.   
+Each image was gigantic — many were over 1GB, and the largest was a whopping 4GB! — and so my computer wasn’t able to open the images using a traditional image viewer. So instead, I resized each image and plotted them:
+
+<img src = "https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/assets/slices.jpg">  
+<br>
+Next, I visualized the masks. The masks provided were actually RLE encoded representations, and someone was nice enough to post the function they made to turn the RLE image into a numpy array. I then took this numpy array and turned it into an image:  
+<br>
+<img src = "https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/assets/masks.jpg">
+<br>
+<br>
+I overlaid these masks on the images to see my target cells:
+
+<img src = "https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/assets/overlay.jpg">
+
+<br>
+<br>
+Here is a close up of the targets:
+<img src = "https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/assets/zoomed.jpg">
