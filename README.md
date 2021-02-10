@@ -12,7 +12,7 @@ I used both Faster R-CNN and Mask R-CNN and compare their performances below.
 <br>
 
 ### Faster R-CNN Results:
-### <a href="https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/code/02-faster-rcnn-pytorch.ipynb"> > EDA NOTEBOOK < </a>  
+#### <a href="https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/code/02-faster-rcnn-pytorch.ipynb"> Faster R-CNN notebook </a>  
 Sample image from the training images, that was split into training and testing sets.  
 Black boxes are ground truth, white boxes are my model's predictions:  
 <img src = "https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/assets/test1.jpg">
@@ -24,7 +24,7 @@ Sample image from the testing images (no ground truth):
 
 
 ### Mask R-CNN Results:
-### <a href="https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/code/05-mask-rcnn-pytorch.ipynb"> > EDA NOTEBOOK < </a>  
+#### <a href="https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/code/05-mask-rcnn-pytorch.ipynb"> Mask R-CNN notebook </a>  
 
 Sample image from the training images, that was split into training and testing sets.  
 Black box is ground truth, grey box is my model's prediction, mask is the aurora colored part:  
@@ -66,7 +66,7 @@ My code will eventually add additional folders called masks, grey and slices.
 
 
 ## EDA:
-### <a href="https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/code/00-kidney-images-EDA.ipynb"> > EDA NOTEBOOK < </a>  
+### <a href="https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/code/00-kidney-images-EDA.ipynb"> EDA notebook </a>  
 I performed some exploratory data analysis on the original images to familiarize myself with the dataset.  
 The jupyter notebook for EDA is included.   
 Each image was gigantic — many were over 1GB, and the largest was a whopping 4GB! — and so my computer wasn’t able to open the images using a traditional image viewer. So instead, I resized each image and plotted them:
@@ -90,7 +90,7 @@ Here is a close up of the targets:
 <br>
 
 ## Preprocessing the images:
-### <a href="https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/code/01-preprocessing-kidney-images.ipynb"> > PREPROCESSING NOTEBOOK < </a>  
+### <a href="https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/code/01-preprocessing-kidney-images.ipynb"> Preprocessing notebook </a>  
 
 
 Steps I took to prepare my images for training:
