@@ -6,7 +6,7 @@ I used both Faster R-CNN and Mask R-CNN and compare their performances below.
 | Model | Epochs Trained | Learning Rate | Weight Decay | Momentum | Step Size | Training Images | Testing Images | mAP | Total Time |
 |-------|----------------|---------------|--------------|----------|-----------|-----------------|----------------|-----|------------|
 |Faster R-CNN| 10 | 0.0001 | 0.001 | 0.9 | 3 | 1597 |200 | 0.576 | 1hr 50min |
-|Mask R-CNN | 1 | 0.001 | 0.01 | 0.9 | 3 | 1597 | 200 | 0.514 |13min 31sec |
+|Mask R-CNN | 10 | 0.001 | 0.01 | 0.9 | 3 | 1597 | 200 | 0.588 |2hr 30min |
  
 <br>
 <br>
