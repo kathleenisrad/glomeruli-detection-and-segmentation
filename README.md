@@ -29,7 +29,10 @@ Sample image from the testing images (no ground truth):
 Sample image from the training images, that was split into training and testing sets.  
 Black box is ground truth, grey box is my model's prediction, mask is the aurora colored part:  
 
-<img src = "https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/assets/test3.jpg">
+<img src = "https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/assets/test3.jpg">  
+
+Sample image from the testing images (no ground truth or bounding boxes):
+<img src = "https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/assets/masksonly.jpg">  
 
 
 ## Dataset:
