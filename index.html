@@ -61,9 +61,9 @@
 
 
 <h3> <center>  File Structure:  </center>  </h3>
-My folders are organized a little differently than the way the original zip file is organized.  
-You will need to move the training and test images to the locations listed below in order for the code to work.  
-My code will eventually add additional folders called masks, grey and slices.  
+<p>My folders are organized a little differently than the way the original zip file is organized. </p> 
+<p>You will need to move the training and test images to the locations listed below in order for the code to work.  </p>
+<p>My code will eventually add additional folders called masks, grey and slices.  </p>
 
 <br>
 <pre>[me@home]$ tree main  
@@ -87,34 +87,34 @@ My code will eventually add additional folders called masks, grey and slices.
 
 
 <h3> <center>  EDA: </center>  </h3>
-<h3> <center>  <a href="https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/code/00-kidney-images-EDA.ipynb"> EDA notebook </a>  
-I performed some exploratory data analysis on the original images to familiarize myself with the dataset.  
-The jupyter notebook for EDA is included.   
-Each image was gigantic — many were over 1GB, and the largest was a whopping 4GB! — and so my computer wasn’t able to open the images using a traditional image viewer. So instead, I resized each image and plotted them:
+<h3> <center>  <a href="https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/code/00-kidney-images-EDA.ipynb"> EDA notebook </a>  </center>  </h3>
+<p>I performed some exploratory data analysis on the original images to familiarize myself with the dataset.   </p>
+<p>The jupyter notebook for EDA is included.    </p>
+<p>Each image was gigantic — many were over 1GB, and the largest was a whopping 4GB! — and so my computer wasn’t able to open the images using a traditional image viewer. So instead, I resized each image and plotted them: </p>
 
-<img src = "https://i.imgur.com/cDRto6q.jpg">  
+<p><img src = "https://i.imgur.com/cDRto6q.jpg">   </p>
 <br>
-Next, I visualized the masks. The masks provided were actually RLE encoded representations, and someone was nice enough to post the function they made to turn the RLE image into a numpy array. I then took this numpy array and turned it into an image:  
+<p>Next, I visualized the masks. The masks provided were actually RLE encoded representations, and someone was nice enough to post the function they made to turn the RLE image into a numpy array. I then took this numpy array and turned it into an image: </p>  
 <br>
-<img src = "https://i.imgur.com/41NbedZ.jpg">
+<p><img src = "https://i.imgur.com/41NbedZ.jpg"> </p>
 <br>
 <br>
-I overlaid these masks on the images to see my target cells:
+<p>I overlaid these masks on the images to see my target cells: </p>
 
-<img src = "https://i.imgur.com/aJyMQHq.jpg">
+<p><img src = "https://i.imgur.com/aJyMQHq.jpg"> </p>
 
 <br>
 <br>
-Here is a close up of the targets:
-<img src = "https://i.imgur.com/NzkpcKK.jpg">
+<p>Here is a close up of the targets: </p>
+<p><img src = "https://i.imgur.com/NzkpcKK.jpg"> </p>
 
 <br>
 
 <h3> <center>  Preprocessing the images: </center>  </h3>
-<h3> <center>  <a href="https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/code/01-preprocessing-kidney-images.ipynb"> Preprocessing notebook </a>  
+<h3> <center>  <a href="https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/code/01-preprocessing-kidney-images.ipynb"> Preprocessing notebook </a>  </center>  </h3>
 
 
-Steps I took to prepare my images for training:
+<p>Steps I took to prepare my images for training:
  - I resized both training and testing to about 50%, then turned them into greyscale in an effort to make their file sizes a bit smaller.  
  - Sliced the resulting images either 16x16 or 32x32, depending on image dimensions.  
    - Example slice:  
@@ -124,6 +124,6 @@ Steps I took to prepare my images for training:
      <img src="https://i.imgur.com/VoDzBF5.jpg">
  - Made bounding boxes around each instance and recorded the x and y coordinates for each bounding box in a CSV.  
 
-     
+     </p>
      </body>
 </html>
