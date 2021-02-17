@@ -37,6 +37,13 @@ I used both Faster R-CNN and Mask R-CNN and compare their performances below.  <
 
 <br>
 <br>
+<br>
+	<br>
+	 <br>
+<br>
+	 <br>
+<br>
+	 <br>
 
 <h3 id = "faster"> <center> Faster R-CNN Results:</center>  </h3>
 <h3> <center> <a href="https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/code/02-faster-rcnn-pytorch.ipynb"> Faster R-CNN notebook </a> </center> </h3>
@@ -49,10 +56,15 @@ I used both Faster R-CNN and Mask R-CNN and compare their performances below.  <
 </p>
 <br>
 <br>
-
+<br>
+	 <br>
+<br>
+	 <br>
+<br>
+	 <br>
 
 <h3 id = "mask"> <center> Mask R-CNN Results: </center>  </h3>
-<p> <center> <a href="https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/code/05-mask-rcnn-pytorch.ipynb"> Mask R-CNN notebook </a> </center> </p>  
+<h3> <center> <a href="https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/code/05-mask-rcnn-pytorch.ipynb"> Mask R-CNN notebook </a> </center> </h3>  
 
 <p>Sample image from the training images, that was split into training and testing sets. 
 Black box is ground truth, grey box is my model's prediction, mask is the aurora colored part:  </p>
@@ -70,6 +82,14 @@ Black box is ground truth, grey box is my model's prediction, mask is the aurora
 
 <br>
 <br>
+	<br>
+<br>
+<br>
+	 <br>
+<br>
+	 <br>
+<br>
+	 <br>
 <h3 id = "file"> <center>  File Structure:  </center>  </h3>
 <p>My folders are organized a little differently than the way the original zip file is organized. You will need to move the training and test images to the locations listed below in order for the code to work.
 My code will eventually add additional folders called masks, grey and slices.  </p>
@@ -94,7 +114,14 @@ My code will eventually add additional folders called masks, grey and slices.  <
     └── JSONs     
         └── <b>ORIGINAL TRAIN JSON FILES GO HERE</b>  </pre>
 
-
+<br>
+<br>
+<br>
+	 <br>
+<br>
+	 <br>
+<br>
+	 <br>
 <h3 id="eda"> <center>  EDA: </center>  </h3>
 <h3> <center>  <a href="https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/code/00-kidney-images-EDA.ipynb"> EDA notebook </a>  </center>  </h3>
 <p>I performed some exploratory data analysis on the original images to familiarize myself with the dataset.
@@ -117,19 +144,32 @@ Each image was gigantic — many were over 1GB, and the largest was a whopping 4
 <p><img src = "https://i.imgur.com/NzkpcKK.jpg"> </p>
 
 <br>
-
+<br>
+<br>
+<br>
+	 <br>
+<br>
+	 <br>
+<br>
+	 <br>
 <h3 id = "processing"> <center>  Preprocessing the images: </center>  </h3>
 <h3> <center>  <a href="https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/code/01-preprocessing-kidney-images.ipynb"> Preprocessing notebook </a>  </center>  </h3>
 
 
 <p>Steps I took to prepare my images for training:</p>
+	<br>
  <p>I resized both training and testing to about 50%, then turned them into greyscale in an effort to make their file sizes a bit smaller. </p>
+	<br>
  <p>Sliced the resulting images either 16x16 or 32x32, depending on image dimensions. </p>
+	<br>
  <p>Example slice: </p>
 	<center> <img src = "https://i.imgur.com/3dXIUlh.jpg"> </center>
+	<br>
  <p>Resized and sliced the masks to match the training images. Then I deleted all the slices from the masks and training images that didn't have any target cells. </p>
+	<br>
  <p>Turned each instance in each mask slice into a different color: </p>
      <center> <img src="https://i.imgur.com/VoDzBF5.jpg"> </center>
+	<br>
  <p>Made bounding boxes around each instance and recorded the x and y coordinates for each bounding box in a CSV. </p>
 
      </p>
