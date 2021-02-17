@@ -3,6 +3,7 @@ The goal of this project is to identify glomeruli in images of kidney slices.
 I used both Faster R-CNN and Mask R-CNN and compare their performances below.  
 
 ## Results:
+
 | Model | Epochs Trained | Learning Rate | Weight Decay | Momentum | Step Size | Training Images | Testing Images | mAP | Total Time |
 |-------|----------------|---------------|--------------|----------|-----------|-----------------|----------------|-----|------------|
 |Faster R-CNN| 10 | 0.0001 | 0.001 | 0.9 | 3 | 1597 |200 | 0.576 | 1hr 50min |
@@ -18,7 +19,7 @@ Black boxes are ground truth, white boxes are my model's predictions:
 <img src = "https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/assets/test1.jpg">
 
 Sample image from the testing images (no ground truth):  
-<img src="https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/assets/test2.jpg">  
+![Image](https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/assets/test2.jpg)  
 <br>
 <br>
 
