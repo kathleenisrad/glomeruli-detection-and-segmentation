@@ -40,7 +40,7 @@ Sample image from the testing images (no ground truth or bounding boxes):
 8 training images and 5 testing images were provided.  
 
 The original images were too large to push onto github. They can be downloaded from here:  
-https://www.kaggle.com/c/hubmap-kidney-segmentation/data
+<a href = "https://www.kaggle.com/c/hubmap-kidney-segmentation/data"> Kaggle Dataset </a>
 
 
 ## File Structure: 
