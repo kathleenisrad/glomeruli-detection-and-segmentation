@@ -30,10 +30,10 @@ Sample image from the testing images (no ground truth):
 Sample image from the training images, that was split into training and testing sets.  
 Black box is ground truth, grey box is my model's prediction, mask is the aurora colored part:  
 
-<img src = "https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/assets/test3.jpg">  
+<img src = "https://i.imgur.com/XJiorfC.jpg">  
 
 Sample image from the testing images (no ground truth or bounding boxes):
-<img src = "https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/assets/masksonly.jpg">  
+<img src = "https://i.imgur.com/rhIAv7R.jpg">  
 
 
 ## Dataset:
@@ -75,21 +75,21 @@ I performed some exploratory data analysis on the original images to familiarize
 The jupyter notebook for EDA is included.   
 Each image was gigantic — many were over 1GB, and the largest was a whopping 4GB! — and so my computer wasn’t able to open the images using a traditional image viewer. So instead, I resized each image and plotted them:
 
-<img src = "https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/assets/slices.jpg">  
+<img src = "https://i.imgur.com/cDRto6q.jpg">  
 <br>
 Next, I visualized the masks. The masks provided were actually RLE encoded representations, and someone was nice enough to post the function they made to turn the RLE image into a numpy array. I then took this numpy array and turned it into an image:  
 <br>
-<img src = "https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/assets/masks.jpg">
+<img src = "https://i.imgur.com/41NbedZ.jpg">
 <br>
 <br>
 I overlaid these masks on the images to see my target cells:
 
-<img src = "https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/assets/overlay.jpg">
+<img src = "https://i.imgur.com/aJyMQHq.jpg">
 
 <br>
 <br>
 Here is a close up of the targets:
-<img src = "https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/assets/zoomed.jpg">
+<img src = "https://i.imgur.com/NzkpcKK.jpg">
 
 <br>
 
@@ -101,8 +101,8 @@ Steps I took to prepare my images for training:
  - I resized both training and testing to about 50%, then turned them into greyscale in an effort to make their file sizes a bit smaller.  
  - Sliced the resulting images either 16x16 or 32x32, depending on image dimensions.  
    - Example slice:  
-       <img src = "https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/assets/examplemaskslice.jpg">  
+       <img src = "https://i.imgur.com/3dXIUlh.jpg">  
  - Resized and sliced the masks to match the training images. Then I deleted all the slices from the masks and training images that didn't have any target cells.  
  - Turned each instance in each mask slice into a different color:  
-     <img src="https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/assets/recoloredmasks.jpg">
+     <img src="https://i.imgur.com/VoDzBF5.jpg">
  - Made bounding boxes around each instance and recorded the x and y coordinates for each bounding box in a CSV.  
