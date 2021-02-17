@@ -22,20 +22,20 @@
 	 <br>
 <br>
 <h2><center> Glomeruli Detection and Segmentation <center> </h2>
-	 <p>The goal of this project is to identify glomeruli in images of kidney slices.</p>  
-<p>I used both Faster R-CNN and Mask R-CNN and compare their performances below.  </p>
+	 <p>The goal of this project is to identify glomeruli in images of kidney slices.
+I used both Faster R-CNN and Mask R-CNN and compare their performances below.  </p>
 
 <br>
 <br>
 
 <h3> <center> Faster R-CNN Results:</center>  </h3>
-<p> <center> <a href="https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/code/02-faster-rcnn-pytorch.ipynb"> Faster R-CNN notebook </a> </center> </p>
-	 <p> Sample image from the training images, that was split into training and testing sets. </p>
-	 <p>Black boxes are ground truth, white boxes are my model's predictions:  </p>
+<h3> <center> <a href="https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/code/02-faster-rcnn-pytorch.ipynb"> Faster R-CNN notebook </a> </center> </h3>
+	 <p> Sample image from the training images, that was split into training and testing sets.
+	 Black boxes are ground truth, white boxes are my model's predictions:  </p>
 	 <p><center> <img src = "https://i.imgur.com/XDK1nJA.jpg"></center> </p>
 <br>
 	 <p>Sample image from the testing images (no ground truth):  </p>
-<p><center> <img src = "https://i.imgur.com/kD1zesY.jpg"></center> <p>
+<p><center> <img src = "https://i.imgur.com/kD1zesY.jpg"></center>
 </p>
 <br>
 <br>
@@ -44,8 +44,8 @@
 <h3> <center> Mask R-CNN Results: </center>  </h3>
 <p> <center> <a href="https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/code/05-mask-rcnn-pytorch.ipynb"> Mask R-CNN notebook </a> </center> </p>  
 
-<p>Sample image from the training images, that was split into training and testing sets. </p> 
-<p>Black box is ground truth, grey box is my model's prediction, mask is the aurora colored part:  </p>
+<p>Sample image from the training images, that was split into training and testing sets. 
+Black box is ground truth, grey box is my model's prediction, mask is the aurora colored part:  </p>
 
 <p><img src = "https://i.imgur.com/XJiorfC.jpg">  </p>
 
@@ -54,16 +54,13 @@
 
 
 <h3> <center>  Dataset:  </center>  </h3>
-<p>8 training images and 5 testing images were provided.  </p>
-
-<p>The original images were too large to push onto github. They can be downloaded from here:  </p>
+<p>8 training images and 5 testing images were provided. The original images were too large to push onto github. They can be downloaded from here:  </p>
 <p><a href = "https://www.kaggle.com/c/hubmap-kidney-segmentation/data"> Kaggle Dataset </a></p>
 
 
 <h3> <center>  File Structure:  </center>  </h3>
-<p>My folders are organized a little differently than the way the original zip file is organized. </p> 
-<p>You will need to move the training and test images to the locations listed below in order for the code to work.  </p>
-<p>My code will eventually add additional folders called masks, grey and slices.  </p>
+<p>My folders are organized a little differently than the way the original zip file is organized. You will need to move the training and test images to the locations listed below in order for the code to work.
+My code will eventually add additional folders called masks, grey and slices.  </p>
 
 <br>
 <pre>[me@home]$ tree main  
@@ -88,9 +85,8 @@
 
 <h3> <center>  EDA: </center>  </h3>
 <h3> <center>  <a href="https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/code/00-kidney-images-EDA.ipynb"> EDA notebook </a>  </center>  </h3>
-<p>I performed some exploratory data analysis on the original images to familiarize myself with the dataset.   </p>
-<p>The jupyter notebook for EDA is included.    </p>
-<p>Each image was gigantic — many were over 1GB, and the largest was a whopping 4GB! — and so my computer wasn’t able to open the images using a traditional image viewer. So instead, I resized each image and plotted them: </p>
+<p>I performed some exploratory data analysis on the original images to familiarize myself with the dataset.
+Each image was gigantic — many were over 1GB, and the largest was a whopping 4GB! — and so my computer wasn’t able to open the images using a traditional image viewer. So instead, I resized each image and plotted them: </p>
 
 <p><img src = "https://i.imgur.com/cDRto6q.jpg">   </p>
 <br>
