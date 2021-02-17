@@ -10,29 +10,37 @@
 html, body {
   font-family: 'Playfair Display', serif;
   text-align: left;
+  margin-right: 200px;
+  margin-left: 200px;
 }
 
 h1 {
   margin-top: 0;
   font-family: 'Playfair Display', serif;
   font-size: 100px;
+  margin-right: 200px;
+  margin-left: 200px;
 }
 
 h2 {
   font-family: 'Playfair Display', serif;
   font-size: 50px;
+   margin-right: 200px;
+  margin-left: 200px;
 }
 
 h3 {
   font-family: 'Playfair Display', serif;
   font-size: 40px;
+   margin-right: 200px;
+  margin-left: 200px;
 }
 
 p {
   font-family: 'Newsreader', serif;  
   font-size: 30px;
-  margin-right: 100px;
-  margin-left: 100px;
+  margin-right: 200px;
+  margin-left: 200px;
 }
 
 #home {
@@ -69,7 +77,7 @@ p {
   position: fixed;
   text-align: center;
   width: 100%;
-  font-size: 1.2em; 
+  font-size: 0.9em; 
   background-color: #Fff;
 }
 
