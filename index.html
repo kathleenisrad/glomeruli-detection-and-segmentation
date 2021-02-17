@@ -5,10 +5,13 @@
     
     <nav>
       <ul id="navbar"> <h3>
-        <li><a href="#home">Home</a></li>
-	<li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-	<li><a href="#contact">Contact</a></li> 
+        <li><a href="kathleenisrad.github.io">Home</a></li>
+	<li><a href="#faster">Faster R-CNN</a></li>
+        <li><a href="#mask">Mask R-CNN</a></li>
+	<li><a href="#data">Dataset</a></li> 
+	<li><a href="#file">File Structure</a></li> 
+	<li><a href="#eda">EDA</a></li>
+	<li><a href="#process">Preprocessing</a></li>
 	      </h3>
       </ul>
     </nav>
@@ -28,7 +31,7 @@ I used both Faster R-CNN and Mask R-CNN and compare their performances below.  <
 <br>
 <br>
 
-<h3> <center> Faster R-CNN Results:</center>  </h3>
+<h3 id = "faster"> <center> Faster R-CNN Results:</center>  </h3>
 <h3> <center> <a href="https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/code/02-faster-rcnn-pytorch.ipynb"> Faster R-CNN notebook </a> </center> </h3>
 	 <p> Sample image from the training images, that was split into training and testing sets.
 	 Black boxes are ground truth, white boxes are my model's predictions:  </p>
@@ -41,7 +44,7 @@ I used both Faster R-CNN and Mask R-CNN and compare their performances below.  <
 <br>
 
 
-<h3> <center> Mask R-CNN Results: </center>  </h3>
+<h3 id = "mask"> <center> Mask R-CNN Results: </center>  </h3>
 <p> <center> <a href="https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/code/05-mask-rcnn-pytorch.ipynb"> Mask R-CNN notebook </a> </center> </p>  
 
 <p>Sample image from the training images, that was split into training and testing sets. 
@@ -54,13 +57,13 @@ Black box is ground truth, grey box is my model's prediction, mask is the aurora
 
 <br>
 <br>
-<h3> <center>  Dataset:  </center>  </h3>
+<h3 id = "data"> <center>  Dataset:  </center>  </h3>
 <p>8 training images and 5 testing images were provided. The original images were too large to push onto github. They can be downloaded from here:  </p>
 <p><a href = "https://www.kaggle.com/c/hubmap-kidney-segmentation/data"> Kaggle Dataset </a></p>
 
 <br>
 <br>
-<h3> <center>  File Structure:  </center>  </h3>
+<h3 id = "file"> <center>  File Structure:  </center>  </h3>
 <p>My folders are organized a little differently than the way the original zip file is organized. You will need to move the training and test images to the locations listed below in order for the code to work.
 My code will eventually add additional folders called masks, grey and slices.  </p>
 
@@ -85,7 +88,7 @@ My code will eventually add additional folders called masks, grey and slices.  <
         └── <b>ORIGINAL TRAIN JSON FILES GO HERE</b>  </pre>
 
 
-<h3> <center>  EDA: </center>  </h3>
+<h3 id="eda"> <center>  EDA: </center>  </h3>
 <h3> <center>  <a href="https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/code/00-kidney-images-EDA.ipynb"> EDA notebook </a>  </center>  </h3>
 <p>I performed some exploratory data analysis on the original images to familiarize myself with the dataset.
 Each image was gigantic — many were over 1GB, and the largest was a whopping 4GB! — and so my computer wasn’t able to open the images using a traditional image viewer. So instead, I resized each image and plotted them: </p>
@@ -108,7 +111,7 @@ Each image was gigantic — many were over 1GB, and the largest was a whopping 4
 
 <br>
 
-<h3> <center>  Preprocessing the images: </center>  </h3>
+<h3 id = "processing"> <center>  Preprocessing the images: </center>  </h3>
 <h3> <center>  <a href="https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/code/01-preprocessing-kidney-images.ipynb"> Preprocessing notebook </a>  </center>  </h3>
 
 
