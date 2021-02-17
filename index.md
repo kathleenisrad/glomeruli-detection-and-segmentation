@@ -1,37 +1,107 @@
-## Welcome to GitHub Pages
+# Glomeruli Detection and Segmentation
+The goal of this project is to identify glomeruli in images of kidney slices.  
+I used both Faster R-CNN and Mask R-CNN and compare their performances below.  
 
-You can use the [editor on GitHub](https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## Results:
+| Model | Epochs Trained | Learning Rate | Weight Decay | Momentum | Step Size | Training Images | Testing Images | mAP | Total Time |
+|-------|----------------|---------------|--------------|----------|-----------|-----------------|----------------|-----|------------|
+|Faster R-CNN| 10 | 0.0001 | 0.001 | 0.9 | 3 | 1597 |200 | 0.576 | 1hr 50min |
+|Mask R-CNN | 10 | 0.001 | 0.01 | 0.9 | 3 | 1597 | 200 | 0.588 |2hr 30min |
+ 
+<br>
+<br>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Faster R-CNN Results:
+#### <a href="https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/code/02-faster-rcnn-pytorch.ipynb"> Faster R-CNN notebook </a>  
+Sample image from the training images, that was split into training and testing sets.  
+Black boxes are ground truth, white boxes are my model's predictions:  
+<img src = "https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/assets/test1.jpg">
 
-### Markdown
+Sample image from the testing images (no ground truth):  
+<img src="https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/assets/test2.jpg">  
+<br>
+<br>
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
+### Mask R-CNN Results:
+#### <a href="https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/code/05-mask-rcnn-pytorch.ipynb"> Mask R-CNN notebook </a>  
 
-# Header 1
-## Header 2
-### Header 3
+Sample image from the training images, that was split into training and testing sets.  
+Black box is ground truth, grey box is my model's prediction, mask is the aurora colored part:  
 
-- Bulleted
-- List
+<img src = "https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/assets/test3.jpg">  
 
-1. Numbered
-2. List
+Sample image from the testing images (no ground truth or bounding boxes):
+<img src = "https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/assets/masksonly.jpg">  
 
-**Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](src)
-```
+## Dataset:
+8 training images and 5 testing images were provided.  
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+The original images were too large to push onto github. They can be downloaded from here:  
+https://www.kaggle.com/c/hubmap-kidney-segmentation/data
 
-### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+## File Structure: 
+My folders are organized a little differently than the way the original zip file is organized.  
+You will need to move the training and test images to the locations listed below in order for the code to work.  
+My code will eventually add additional folders called masks, grey and slices.  
 
-### Support or Contact
+<br>
+<pre>[me@home]$ tree main  
+<b>main</b>
+├── code  
+├── CSVs
+|   └── <b>ORIGINAL CSVs GO HERE</b> 
+├── test  
+│   ├── images  
+│   │   └── <b>ORIGINAL TEST IMAGES GO HERE</b>  
+│   │
+│   └── JSONs      
+│       └── <b>ORIGINAL TEST JSON FILES GO HERE  </b> 
+│       
+└── train  
+    ├── images  
+    │   └── <b>ORIGINAL TRAIN IMAGES GO HERE</b>   
+    │    
+    └── JSONs     
+        └── <b>ORIGINAL TRAIN JSON FILES GO HERE</b>  </pre>
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+
+## EDA:
+### <a href="https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/code/00-kidney-images-EDA.ipynb"> EDA notebook </a>  
+I performed some exploratory data analysis on the original images to familiarize myself with the dataset.  
+The jupyter notebook for EDA is included.   
+Each image was gigantic — many were over 1GB, and the largest was a whopping 4GB! — and so my computer wasn’t able to open the images using a traditional image viewer. So instead, I resized each image and plotted them:
+
+<img src = "https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/assets/slices.jpg">  
+<br>
+Next, I visualized the masks. The masks provided were actually RLE encoded representations, and someone was nice enough to post the function they made to turn the RLE image into a numpy array. I then took this numpy array and turned it into an image:  
+<br>
+<img src = "https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/assets/masks.jpg">
+<br>
+<br>
+I overlaid these masks on the images to see my target cells:
+
+<img src = "https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/assets/overlay.jpg">
+
+<br>
+<br>
+Here is a close up of the targets:
+<img src = "https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/assets/zoomed.jpg">
+
+<br>
+
+## Preprocessing the images:
+### <a href="https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/code/01-preprocessing-kidney-images.ipynb"> Preprocessing notebook </a>  
+
+
+Steps I took to prepare my images for training:
+ - I resized both training and testing to about 50%, then turned them into greyscale in an effort to make their file sizes a bit smaller.  
+ - Sliced the resulting images either 16x16 or 32x32, depending on image dimensions.  
+   - Example slice:  
+       <img src = "https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/assets/examplemaskslice.jpg">  
+ - Resized and sliced the masks to match the training images. Then I deleted all the slices from the masks and training images that didn't have any target cells.  
+ - Turned each instance in each mask slice into a different color:  
+     <img src="https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/assets/recoloredmasks.jpg">
+ - Made bounding boxes around each instance and recorded the x and y coordinates for each bounding box in a CSV.  
