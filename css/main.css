@@ -24,11 +24,13 @@ h1 {
 }
 
 h2 {
+  margin-top: 30;
   font-family: 'Playfair Display', serif;
   font-size: 50px;
 }
 
 h3 {
+  margin-top: 30;
   font-family: 'Playfair Display', serif;
   font-size: 40px;
 }
