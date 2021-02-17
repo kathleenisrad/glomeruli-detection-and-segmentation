@@ -9,7 +9,7 @@
 
 html, body {
   font-family: 'Playfair Display', serif;
-  text-align: center;
+  text-align: left;
 }
 
 h1 {
@@ -31,6 +31,8 @@ h3 {
 p {
   font-family: 'Newsreader', serif;  
   font-size: 30px;
+  margin-right: 100px;
+  margin-left: 100px;
 }
 
 #home {
