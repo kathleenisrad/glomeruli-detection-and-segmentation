@@ -19,7 +19,41 @@
 <h2><center> Glomeruli Detection and Segmentation <center> </h2>
 	 <p>The goal of this project is to identify glomeruli in images of kidney slices.
 I used both Faster R-CNN and Mask R-CNN and compare their performances below.  </p>
-
+<br><br>
+	
+<table>
+  <tr>
+    <th>Model</th>
+    <th>Epochs</th>
+    <th>Learning Rate</th>
+    <th>Weight Decay</th>
+    <th>Step Size</th>
+    <th>Training Images</th>
+	  <th>Testing Images</th>
+    <th>mAP</th>
+  </tr>
+  <tr>
+    <td>Faster R-CNN</td>
+    <td>10</td>
+    <td>0.0001</td>
+	  <td> 0.001</td>
+    <td>3</td>
+    <td>1597</td>
+	  <td>200</td>
+    <td>0.576</td>
+  </tr>
+  <tr>
+   <td>Mask R-CNN</td>
+    <td>10</td>
+    <td>0.001</td>
+	  <td> 0.01</td>
+    <td>3</td>
+    <td>1597</td>
+	  <td>200</td>
+    <td>0.588</td>
+  </tr>
+	
+	
 <br>
 <br>
 
