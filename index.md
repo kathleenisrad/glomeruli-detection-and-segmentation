@@ -19,7 +19,7 @@ Black boxes are ground truth, white boxes are my model's predictions:
 <img src = "https://rawgit.com/kathleenisrad/glomeruli-detection-and-segmentation/main/assets/test1.jpg">
 
 Sample image from the testing images (no ground truth):  
-![Image](https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/assets/test2.jpg)  
+![Image](https://www.thedataschool.com.au/wp-content/uploads/2019/06/blob-161097_960_720.png)  
 <br>
 <br>
 
