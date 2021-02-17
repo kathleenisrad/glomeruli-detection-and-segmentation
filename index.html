@@ -41,26 +41,26 @@
 <br>
 
 
-### Mask R-CNN Results:
-#### <a href="https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/code/05-mask-rcnn-pytorch.ipynb"> Mask R-CNN notebook </a>  
+<h3> <center> Mask R-CNN Results: </center>  </h3>
+<p> <center> <a href="https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/code/05-mask-rcnn-pytorch.ipynb"> Mask R-CNN notebook </a> </center> </p>  
 
-Sample image from the training images, that was split into training and testing sets.  
-Black box is ground truth, grey box is my model's prediction, mask is the aurora colored part:  
+<p>Sample image from the training images, that was split into training and testing sets. </p> 
+<p>Black box is ground truth, grey box is my model's prediction, mask is the aurora colored part:  </p>
 
-<img src = "https://i.imgur.com/XJiorfC.jpg">  
+<p><img src = "https://i.imgur.com/XJiorfC.jpg">  </p>
 
-Sample image from the testing images (no ground truth or bounding boxes):
-<img src = "https://i.imgur.com/rhIAv7R.jpg">  
-
-
-## Dataset:
-8 training images and 5 testing images were provided.  
-
-The original images were too large to push onto github. They can be downloaded from here:  
-<a href = "https://www.kaggle.com/c/hubmap-kidney-segmentation/data"> Kaggle Dataset </a>
+<p>Sample image from the testing images (no ground truth or bounding boxes):</p>
+<p><img src = "https://i.imgur.com/rhIAv7R.jpg">  </p>
 
 
-## File Structure: 
+<h3> <center>  Dataset:  </center>  </h3>
+<p>8 training images and 5 testing images were provided.  </p>
+
+<p>The original images were too large to push onto github. They can be downloaded from here:  </p>
+<p><a href = "https://www.kaggle.com/c/hubmap-kidney-segmentation/data"> Kaggle Dataset </a></p>
+
+
+<h3> <center>  File Structure:  </center>  </h3>
 My folders are organized a little differently than the way the original zip file is organized.  
 You will need to move the training and test images to the locations listed below in order for the code to work.  
 My code will eventually add additional folders called masks, grey and slices.  
@@ -86,8 +86,8 @@ My code will eventually add additional folders called masks, grey and slices.
         └── <b>ORIGINAL TRAIN JSON FILES GO HERE</b>  </pre>
 
 
-## EDA:
-### <a href="https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/code/00-kidney-images-EDA.ipynb"> EDA notebook </a>  
+<h3> <center>  EDA: </center>  </h3>
+<h3> <center>  <a href="https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/code/00-kidney-images-EDA.ipynb"> EDA notebook </a>  
 I performed some exploratory data analysis on the original images to familiarize myself with the dataset.  
 The jupyter notebook for EDA is included.   
 Each image was gigantic — many were over 1GB, and the largest was a whopping 4GB! — and so my computer wasn’t able to open the images using a traditional image viewer. So instead, I resized each image and plotted them:
@@ -110,8 +110,8 @@ Here is a close up of the targets:
 
 <br>
 
-## Preprocessing the images:
-### <a href="https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/code/01-preprocessing-kidney-images.ipynb"> Preprocessing notebook </a>  
+<h3> <center>  Preprocessing the images: </center>  </h3>
+<h3> <center>  <a href="https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/code/01-preprocessing-kidney-images.ipynb"> Preprocessing notebook </a>  
 
 
 Steps I took to prepare my images for training:
