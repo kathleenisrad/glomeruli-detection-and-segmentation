@@ -1,0 +1,99 @@
+@import 'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Newsreader:wght@200&display=swap';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+html, body {
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 100px;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 50px;
+}
+
+h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+}
+
+p {
+  font-family: 'Newsreader', serif;  
+  font-size: 30px;
+}
+
+#home {
+  top: 20; 
+  line-height: 1.6;
+  min-height: 55vh;
+  padding-top: 30vh;
+  padding-bottom: 100vh;
+}
+
+#about {
+  line-height: 1.5;
+  min-height: 20vh;
+  padding-top: 15vh;
+  text-align: center
+}
+  
+#projects {
+  line-height: 1.5;
+  min-height: 20vh;
+  padding-top: 15vh;
+  text-align: center
+}
+
+#contact {
+  line-height: 1.5;
+  min-height: 20vh;
+  padding-top: 15vh;
+  text-align: center
+}
+/* Nav bar */
+
+ nav ul {
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  font-size: 1.2em; 
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 30px; 
+}
+
+nav ul li a {
+  color: #000;
+  text-decoration: none;  
+}
+nav ul li a:hover {
+  color: #ababab;
+}
+
+
+/* mobile section */
+
+@media screen and (max-width: 400px) {
+  nav ul {
+    text-align: center;
+  }
+  nav ul li {
+    margin: 20px;
+  }
+  .project {
+    margin: 40px 0;
+  }
+}
