@@ -4,10 +4,10 @@ I used both Faster R-CNN and Mask R-CNN and compare their performances below.
 
 ## Results:
 
-| Model | Epochs Trained | Learning Rate | Weight Decay | Momentum | Step Size | mAP | Total Time |
-|-------|----------------|---------------|--------------|----------|-----------|-----|------------|
-|Faster R-CNN| 10 | 0.0001 | 0.001 | 0.9 | 3  | 0.576 | 1hr 50min |
-|Mask R-CNN | 10 | 0.001 | 0.01 | 0.9 | 3  | 0.588 |2hr 30min |
+| Model | Epochs Trained | Learning Rate | Weight Decay | Step Size | Training Images | Testing Images | mAP | Total Time |
+|-------|----------------|---------------|--------------|-----------|-----------------|----------------|-----|------------|
+|Faster R-CNN| 10 | 0.0001 | 0.001 | 3 | 1597 |200 | 0.576 | 1hr 50min |
+|Mask R-CNN | 10 | 0.001 | 0.01 | 3 | 1597 | 200 | 0.588 |2hr 30min |
  
 <br>
 <br>
@@ -16,7 +16,7 @@ I used both Faster R-CNN and Mask R-CNN and compare their performances below.
 #### <a href="https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/code/02-faster-rcnn-pytorch.ipynb"> Faster R-CNN notebook </a>  
 Sample image from the training images, that was split into training and testing sets.  
 Black boxes are ground truth, white boxes are my model's predictions:  
-<img src = "https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/assets/test1.jpg">
+<img src = "https://rawgit.com/kathleenisrad/glomeruli-detection-and-segmentation/main/assets/test1.jpg">
 
 Sample image from the testing images (no ground truth):  
 ![Image](https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/assets/test2.jpg)  
