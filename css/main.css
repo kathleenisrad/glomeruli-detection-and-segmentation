@@ -21,18 +21,24 @@ h1 {
   margin-top: 0;
   font-family: 'Playfair Display', serif;
   font-size: 100px;
+  margin-left: 25%;
+  margin-right:25%;
 }
 
 h2 {
   margin-top: 30;
   font-family: 'Playfair Display', serif;
   font-size: 50px;
+  margin-left: 25%;
+  margin-right:25%;
 }
 
 h3 {
   margin-top: 30;
   font-family: 'Playfair Display', serif;
   font-size: 40px;
+  margin-left: 25%;
+  margin-right:25%;
 }
 
 p {
