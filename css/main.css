@@ -2,8 +2,8 @@
 @import 'https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap';
 
 * {
-  margin: 100;
-  padding: 200;
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -31,6 +31,8 @@ h3 {
 p {
   font-family: 'Roboto', sans-serif;
   font-size: 30px;
+  margin-left: 200px;
+  margin-right:200px;
 }
 
 #home {
