@@ -1,5 +1,5 @@
 @import 'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap';
-@import ''https://fonts.googleapis.com/css2?family=Newsreader&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap';
 
 * {
   margin: 0;
@@ -29,7 +29,7 @@ h3 {
 }
 
 p {
-  font-family: 'Newsreader', serif;  
+  font-family: 'Roboto', sans-serif;
   font-size: 30px;
 }
 
