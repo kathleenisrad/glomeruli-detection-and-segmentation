@@ -16,10 +16,10 @@ I used both Faster R-CNN and Mask R-CNN and compare their performances below.
 #### <a href="https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/code/02-faster-rcnn-pytorch.ipynb"> Faster R-CNN notebook </a>  
 Sample image from the training images, that was split into training and testing sets.  
 Black boxes are ground truth, white boxes are my model's predictions:  
-<img src = "https://imgur.com/XDK1nJA">
+<img src = "https://i.imgur.com/XDK1nJA.jpg">
 
 Sample image from the testing images (no ground truth):  
-![Image](https://imgur.com/kD1zesY)  
+![Image](https://i.imgur.com/kD1zesY.jpg)  
 <br>
 <br>
 
