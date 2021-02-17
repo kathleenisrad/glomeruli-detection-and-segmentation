@@ -74,13 +74,12 @@ p {
   position: fixed;
   text-align: center;
   width: 100%;
-  font-size: 0.5em; 
+  font-size: 1.2em; 
   background-color: #Fff;
 }
 
 nav ul li {
-  display: inline-block;
-  margin: 30px; 
+  display: inline-block; 
 }
 
 nav ul li a {
