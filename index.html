@@ -122,15 +122,15 @@ Each image was gigantic — many were over 1GB, and the largest was a whopping 4
 <h3> <center>  <a href="https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/code/01-preprocessing-kidney-images.ipynb"> Preprocessing notebook </a>  </center>  </h3>
 
 
-<p>Steps I took to prepare my images for training:
- <li>I resized both training and testing to about 50%, then turned them into greyscale in an effort to make their file sizes a bit smaller.  </li>
- <li>Sliced the resulting images either 16x16 or 32x32, depending on image dimensions.  </li>
- <li>Example slice:  </li>
-	 <p> <center> <img src = "https://i.imgur.com/3dXIUlh.jpg"> </center> </p>
- <li>Resized and sliced the masks to match the training images. Then I deleted all the slices from the masks and training images that didn't have any target cells.  </li>
- <li>Turned each instance in each mask slice into a different color:  </li>
-     <p><center> <img src="https://i.imgur.com/VoDzBF5.jpg"> </center></p>
- <li>Made bounding boxes around each instance and recorded the x and y coordinates for each bounding box in a CSV.  </li>
+<p>Steps I took to prepare my images for training:</p>
+ <p>I resized both training and testing to about 50%, then turned them into greyscale in an effort to make their file sizes a bit smaller. </p>
+ <p>Sliced the resulting images either 16x16 or 32x32, depending on image dimensions. </p>
+ <p>Example slice: </p>
+	<center> <img src = "https://i.imgur.com/3dXIUlh.jpg"> </center>
+ <p>Resized and sliced the masks to match the training images. Then I deleted all the slices from the masks and training images that didn't have any target cells. </p>
+ <p>Turned each instance in each mask slice into a different color: </p>
+     <center> <img src="https://i.imgur.com/VoDzBF5.jpg"> </center>
+ <p>Made bounding boxes around each instance and recorded the x and y coordinates for each bounding box in a CSV. </p>
 
      </p>
      </body>
