@@ -46,6 +46,7 @@ h3 {
   margin-left: 25%;
   margin-right:25%;
 }
+
 h4 {
   margin-top: 30;
   font-family: 'Playfair Display', serif;
@@ -53,6 +54,7 @@ h4 {
   margin-left: 25%;
   margin-right:25%;
 }
+
 p {
   font-family: 'Roboto', sans-serif;
   font-size: 30px;
@@ -61,34 +63,6 @@ p {
   text-align: left
 }
 
-#home {
-  top: 20; 
-  line-height: 1.6;
-  min-height: 55vh;
-  padding-top: 30vh;
-  padding-bottom: 100vh;
-}
-
-#about {
-  line-height: 1.5;
-  min-height: 20vh;
-  padding-top: 15vh;
-  text-align: center
-}
-  
-#projects {
-  line-height: 1.5;
-  min-height: 20vh;
-  padding-top: 15vh;
-  text-align: center
-}
-
-#contact {
-  line-height: 1.5;
-  min-height: 20vh;
-  padding-top: 15vh;
-  text-align: center
-}
 /* Nav bar */
 
  nav ul {
