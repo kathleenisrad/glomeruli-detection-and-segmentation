@@ -68,36 +68,43 @@ I used both Faster R-CNN and Mask R-CNN and compare their performances below.  <
 <br>
 
 <h3 id = "faster"> Faster R-CNN Results:  </h3>
+	<br>
 <p><a href="https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/code/02-faster-rcnn-pytorch.ipynb"> Faster R-CNN notebook </a> </p>
 	 <p> Sample image from the training images, that was split into training and testing sets.
 	 Black boxes are ground truth, white boxes are my model's predictions:  </p>
+	<br>
 	 <p> <img src = "https://i.imgur.com/XDK1nJA.jpg"> </p>
 <br><br>
 	 <p>Sample image from the testing images (no ground truth):  </p>
+	<br>
 <p> <img src = "https://i.imgur.com/kD1zesY.jpg"> </p>
 <br>
 <br>
 
 <h3 id = "mask"> Mask R-CNN Results:  </h3>
+	<br>
 <p>  <a href="https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/code/05-mask-rcnn-pytorch.ipynb"> Mask R-CNN notebook </a> </p>  
 
 <p>Sample image from the training images, that was split into training and testing sets. 
 Black box is ground truth, grey box is my model's prediction, mask is the aurora colored part:  </p>
-
+<br>
 <p><center><img src = "https://i.imgur.com/XJiorfC.jpg"> </center> </p>
-
+<br><br>
 <p>Sample image from the testing images (no ground truth or bounding boxes):</p>
+	<br>
 <p><center><img src = "https://i.imgur.com/rhIAv7R.jpg"> </center> </p>
 <br>
 <br>
 
 <h3 id = "data">  Dataset:  </h3>
+	<br>
 <p>8 training images and 5 testing images were provided. The original images were too large to push onto github. They can be downloaded from here:  </p>
-<center><a href = "https://www.kaggle.com/c/hubmap-kidney-segmentation/data"> Kaggle Dataset </a></center>
+<p><center><a href = "https://www.kaggle.com/c/hubmap-kidney-segmentation/data"> Kaggle Dataset </a></center></p>
 
 <br>
 <br>
 <h3 id = "file"> <center>  File Structure:  </center>  </h3>
+	<br>
 <p>My folders are organized a little differently than the way the original zip file is organized. You will need to move the training and test images to the locations listed below in order for the code to work.
 My code will eventually add additional folders called masks, grey and slices.  </p>
 
@@ -133,10 +140,13 @@ My code will eventually add additional folders called masks, grey and slices.  <
 <br>
 
 <h3 id="eda">   EDA:  </h3>
+	<br>
 <p>   <a href="https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/code/00-kidney-images-EDA.ipynb"> EDA notebook </a>  </p>
 <p>I performed some exploratory data analysis on the original images to familiarize myself with the dataset.
-Each image was gigantic — many were over 1GB, and the largest was a whopping 4GB! — and so my computer wasn’t able to open the images using a traditional image viewer. So instead, I resized each image and plotted them: </p>
-
+Each image was gigantic — many were over 1GB, and the largest was a whopping 4GB! — and so my computer wasn’t able to open the images using a traditional image viewer. 
+	<br>
+	So instead, I resized each image and plotted them: </p>
+<br>
 <p><img src = "https://i.imgur.com/cDRto6q.jpg">   </p>
 <br>
 <p>Next, I visualized the masks. The masks provided were actually RLE encoded representations, and someone was nice enough to post the function they made to turn the RLE image into a numpy array. I then took this numpy array and turned it into an image: </p>  
@@ -158,6 +168,7 @@ Each image was gigantic — many were over 1GB, and the largest was a whopping 4
 
 
 <h3 id = "process">  Preprocessing the images: </h3>
+	<br>
 <p> <a href="https://github.com/kathleenisrad/glomeruli-detection-and-segmentation/blob/main/code/01-preprocessing-kidney-images.ipynb"> Preprocessing notebook </a> </p>
 
 
@@ -168,6 +179,7 @@ Each image was gigantic — many were over 1GB, and the largest was a whopping 4
  <p>Sliced the resulting images either 16x16 or 32x32, depending on image dimensions. </p>
 	<br>
  <p>Example slice: </p>
+	<br>
 	<p> <center> <img src = "https://i.imgur.com/3dXIUlh.jpg"> </center> </p>
 	<br>
  <p>Resized and sliced the masks to match the training images. Then I deleted all the slices from the masks and training images that didn't have any target cells. </p>
